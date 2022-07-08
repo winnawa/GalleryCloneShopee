@@ -1,0 +1,28 @@
+
+.container{
+    display: flex;
+    border-right-color: black;
+    border-right-style: dashed;
+    width: 300px;
+}
+
+.symbol {
+    background-image: url('../../img/iconSymbol.png');
+    background-size: 150px 150px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:130px;
+    height:130px;
+}
+
+.word{
+    display: flex;
+    
+    align-items: center;
+    
+    width: 120px;
+    font-weight: bold;
+    font-style: italic;
+    font-size:x-large;
+}
+

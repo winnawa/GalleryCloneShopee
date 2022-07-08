@@ -1,0 +1,13 @@
+.segment{
+    display: flex;
+    justify-content: flex-start;
+    width:130px;
+    height:65px;
+    border-style: double;
+    border-radius: 25px;
+}
+div.segment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
