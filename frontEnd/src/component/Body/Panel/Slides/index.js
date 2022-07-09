@@ -1,9 +1,9 @@
 import { useState,useEffect } from "react"
 // import styles from './Slides.module.css'
-import {Container} from './styled.ts';
+import {Container, CircleInTheSlide} from './styled.ts';
 
 const Slides = ()=>{
-    let slides = [{
+    const slides = [{
         name:"Mona Lisa",
         url:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
     },{
@@ -40,9 +40,16 @@ const Slides = ()=>{
         }
       }, [currentPosInSlides]);
 
+    const circlesInTheSlides = slides.map((element,index)=>{
+        if (index !== currentPosInSlides) {return <CircleInTheSlide active={false} onClick={()=>{updatePos(index)}}/> }
+        else {return <CircleInTheSlide active={true} onClick={()=>{updatePos(index)}}/>}
+    });
+
     return(
         <Container imgURL={slides[currentPosInSlides].url}>
-            
+            <div style={{position:'absolute', width:'100%',height:'35px',display:"flex",justifyContent:"center", bottom:'0px' }}>
+                {circlesInTheSlides}
+            </div>
         </Container>
     )
 

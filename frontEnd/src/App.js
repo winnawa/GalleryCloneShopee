@@ -4,8 +4,8 @@ import DrawList from './component/DrawList';
 import Header from './component/Header/Header';
 import {ApolloClient,InMemoryCache,ApolloProvider,HttpLink,from} from '@apollo/client'
 import {onError} from '@apollo/client/link/error'
-import Slides from './component/Body/Slides';
-
+import Panel from './component/Body/Panel';
+//import { Body } from './component/Body';
 
 const errorLink= onError(({graphQLErrors, networkError})=>{
   if (graphQLErrors){
@@ -32,8 +32,10 @@ function App() {
     <ApolloProvider client={client}>
         <div className="App">
             <Header/>
-            <Slides/>
-            
+            <Panel></Panel>
+            {/* <Slides/> */}
+            {/* <Body>
+            </Body> */}
         </div>
     </ApolloProvider>
   );
