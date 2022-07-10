@@ -6,7 +6,7 @@ import UserOption from "./UserOption";
 const Header = ()=>{
 
     return (
-        <div style={{display:"flex"}}>
+        <div style={{display:"flex", marginBottom:"10px"}}>
             <SymbolIcon/>
             <SearchBar/>
             <UserOption/> 
